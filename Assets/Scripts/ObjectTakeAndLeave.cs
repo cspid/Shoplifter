@@ -1,17 +1,28 @@
 using UnityEngine;
+using RootMotion.FinalIK;
 
 
 
-	public class ObjectTakeAndLeave : MonoBehaviour {
+public class ObjectTakeAndLeave : MonoBehaviour {
 
 		public Transform leftHand;
 		public Transform rightHand;
     
-    public GameObject placementPoint;
+        public GameObject placementPoint;
 
         bool holdingRight;
         bool holdingLeft;
 
+        HoldCheck holdCheck;
+
+
+        
+
+
+    private void Start()
+    {
+        holdCheck = GameObject.FindWithTag("Player").GetComponent<HoldCheck>();
+    }
     // Called by the Interaction Object
     void OnPickUp()
         {
@@ -28,17 +39,19 @@ using UnityEngine;
                 //Make the reachpoint active for player's Left Hand
                 print("Holding Left");
                 holdingLeft = true;
+                holdCheck.holdingLeft = true;
                // placementManager.CanPlaceL();
-            
-            }
+
+        }
             //If the item is in the character's Right Hand
             if (gameObject.transform.parent == rightHand)
             {
                 //Make the reachpoint active for player's Right Hand
                 print("Holding Right");
                 holdingRight = true;
-               // placementManager.CanPlaceR();
-            }
+                holdCheck.holdingRight = true;
+            // placementManager.CanPlaceR();
+        }
 
             if (holdingLeft == true || holdingRight == true)
             {
@@ -52,6 +65,7 @@ using UnityEngine;
         {
             print("Releasing Left");
             holdingLeft = false;
+            holdCheck.holdingLeft = false;
             // placementManager.CantPlaceL();
         }
 
@@ -59,6 +73,7 @@ using UnityEngine;
         {
             print("Releasing Right");
             holdingRight = false;
+            holdCheck.holdingRight = false;
             //placementManager.CantPlaceR();
         }
 

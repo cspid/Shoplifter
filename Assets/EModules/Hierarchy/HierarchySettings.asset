@@ -15,7 +15,17 @@ MonoBehaviour:
   last_scenesV2:
   - guid: 86a528c3443b22b4bb4fe029249fdea3
     pin: 0
-    path: Assets/project/Scenes/test.unity
+    path: Assets/Scenes/test.unity
+    additional_guid: []
+    additional_path: []
+  - guid: 6aa7e7dc669224b66abda13816fd66e8
+    pin: 0
+    path: Assets/project/Plugins/RootMotion/FinalIK/_DEMOS/FBBIK/Interaction.unity
+    additional_guid: []
+    additional_path: []
+  - guid: 583d03f8c5b5e4b30b67347ab343a511
+    pin: 0
+    path: Assets/project/Plugins/RootMotion/FinalIK/_DEMOS/FBBIK/Interaction Trigger.unity
     additional_guid: []
     additional_path: []
   - guid: 49e7dff33e6a14d4e8bda8ea0e1725c0
@@ -32,11 +42,6 @@ MonoBehaviour:
     pin: 0
     path: Assets/project/Plugins/RootMotion/FinalIK/_DEMOS/FBBIK/Interaction Pick
       Up 2-Handed.unity
-    additional_guid: []
-    additional_path: []
-  - guid: 6aa7e7dc669224b66abda13816fd66e8
-    pin: 0
-    path: Assets/project/Plugins/RootMotion/FinalIK/_DEMOS/FBBIK/Interaction.unity
     additional_guid: []
     additional_path: []
   - guid: 7dcd2eaf4caf4435790e962139c14b3c

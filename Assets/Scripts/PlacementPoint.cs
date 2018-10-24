@@ -15,6 +15,7 @@ public class PlacementPoint : MonoBehaviour {
     {
         if (other.gameObject.tag == "Interactive")
         {
+            print("test");
             heldObject = other.gameObject;
             //newPos = heldObject.transform.position;
             //OnPutDown();

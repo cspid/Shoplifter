@@ -15,7 +15,7 @@ public class UIActionTester : MonoBehaviour
     public Transform leftThighBendTarget;
     public InteractionSystem interactionSystem; // Reference to the InteractionSystem of the character
     public bool interrupt; // Can we interrupt an interaction of an effector?
-    public Sitting sitting;
+    //public Sitting sitting;
 
     // The interaction objects
     public InteractionObject ball, sittingMain, sittingLeftHand, sittingRightHand, cigarette, door;
@@ -45,7 +45,7 @@ public class UIActionTester : MonoBehaviour
         if (!interactionSystem.inInteraction && Input.GetButtonDown("WXButton1"))
         {
             print("test");
-            sitting.RunButtCheck();
+           //sitting.RunButtCheck();
             //Body
             interactionSystem.StartInteraction(FullBodyBipedEffector.Body, sittingMain, interrupt);
             //Left Leg
@@ -94,7 +94,7 @@ public class UIActionTester : MonoBehaviour
         if (!interactionSystem.inInteraction && GUILayout.Button("Sit Down"))
         {
             print("test");
-            sitting.RunButtCheck();
+//            sitting.RunButtCheck();
             //Body
             interactionSystem.StartInteraction(FullBodyBipedEffector.Body, sittingMain, interrupt);
             //Left Leg
