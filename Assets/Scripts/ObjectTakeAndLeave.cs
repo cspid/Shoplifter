@@ -10,19 +10,70 @@ public class ObjectTakeAndLeave : MonoBehaviour {
     
         public GameObject placementPoint;
 
+
+
+        public bool fireman;
+        public bool tankTop;
+        public bool hatGuy;
+        public bool trenchLady;
+
+
+
+
+        public Transform firemanPivot;
+        public Transform tankTopPivot;
+        public Transform hatGuyPivot;
+        public Transform trenchLadyPivot;
+
+
+
         bool holdingRight;
         bool holdingLeft;
 
         HoldCheck holdCheck;
 
 
-        
-
-
     private void Start()
     {
         holdCheck = GameObject.FindWithTag("Player").GetComponent<HoldCheck>();
     }
+
+     void Update()
+    {
+        //ensure only one is true
+        if (fireman == true) {
+            firemanPivot.gameObject.SetActive(true);
+            tankTopPivot.gameObject.SetActive(false);
+            hatGuyPivot.gameObject.SetActive(false);
+            trenchLadyPivot.gameObject.SetActive(false);
+        }
+
+        if (tankTop == true)
+        {
+            tankTopPivot.gameObject.SetActive(true);
+            firemanPivot.gameObject.SetActive(false);
+            hatGuyPivot.gameObject.SetActive(false);
+            trenchLadyPivot.gameObject.SetActive(false);
+        }
+
+        if (trenchLadyPivot == true)
+        {
+            trenchLadyPivot.gameObject.SetActive(true);
+            hatGuyPivot.gameObject.SetActive(false);
+            firemanPivot.gameObject.SetActive(false);
+            tankTopPivot.gameObject.SetActive(false);
+        }
+
+        if (hatGuy == true)
+        {
+            hatGuyPivot.gameObject.SetActive(true);
+            firemanPivot.gameObject.SetActive(false);
+            tankTopPivot.gameObject.SetActive(false);
+            trenchLadyPivot.gameObject.SetActive(false);
+        }
+
+    }
+
     // Called by the Interaction Object
     void OnPickUp()
         {
@@ -40,7 +91,6 @@ public class ObjectTakeAndLeave : MonoBehaviour {
                 print("Holding Left");
                 holdingLeft = true;
                 holdCheck.holdingLeft = true;
-               // placementManager.CanPlaceL();
 
         }
             //If the item is in the character's Right Hand
@@ -50,7 +100,6 @@ public class ObjectTakeAndLeave : MonoBehaviour {
                 print("Holding Right");
                 holdingRight = true;
                 holdCheck.holdingRight = true;
-            // placementManager.CanPlaceR();
         }
 
             if (holdingLeft == true || holdingRight == true)
@@ -66,7 +115,6 @@ public class ObjectTakeAndLeave : MonoBehaviour {
             print("Releasing Left");
             holdingLeft = false;
             holdCheck.holdingLeft = false;
-            // placementManager.CantPlaceL();
         }
 
         if (gameObject.transform.parent == rightHand)
@@ -74,7 +122,6 @@ public class ObjectTakeAndLeave : MonoBehaviour {
             print("Releasing Right");
             holdingRight = false;
             holdCheck.holdingRight = false;
-            //placementManager.CantPlaceR();
         }
 
         if (holdingLeft == false && holdingRight == false){
