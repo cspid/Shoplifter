@@ -41,7 +41,8 @@ public class ObjectTakeAndLeave : MonoBehaviour {
      void Update()
     {
         //ensure only one is true
-        if (fireman == true) {
+       if (fireman == true) 
+		{
             firemanPivot.gameObject.SetActive(true);
             tankTopPivot.gameObject.SetActive(false);
             hatGuyPivot.gameObject.SetActive(false);
@@ -56,21 +57,21 @@ public class ObjectTakeAndLeave : MonoBehaviour {
             trenchLadyPivot.gameObject.SetActive(false);
         }
 
-        if (trenchLadyPivot == true)
+       if (trenchLady == true)
         {
             trenchLadyPivot.gameObject.SetActive(true);
             hatGuyPivot.gameObject.SetActive(false);
             firemanPivot.gameObject.SetActive(false);
             tankTopPivot.gameObject.SetActive(false);
         }
-
+		/* 
         if (hatGuy == true)
         {
             hatGuyPivot.gameObject.SetActive(true);
             firemanPivot.gameObject.SetActive(false);
             tankTopPivot.gameObject.SetActive(false);
             trenchLadyPivot.gameObject.SetActive(false);
-        }
+        }*/
 
     }
 
