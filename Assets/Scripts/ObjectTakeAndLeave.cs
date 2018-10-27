@@ -38,41 +38,13 @@ public class ObjectTakeAndLeave : MonoBehaviour {
         holdCheck = GameObject.FindWithTag("Player").GetComponent<HoldCheck>();
     }
 
-     void Update()
+	private void OnTriggerEnter(Collider other)
+	{
+		if (other.tag == "range") holdCheck = other.transform.root.GetComponent<HoldCheck>();
+	}
+
+	void Update()
     {
-        //ensure only one is true
-       if (fireman == true) 
-		{
-            firemanPivot.gameObject.SetActive(true);
-            tankTopPivot.gameObject.SetActive(false);
-            hatGuyPivot.gameObject.SetActive(false);
-            trenchLadyPivot.gameObject.SetActive(false);
-        }
-
-        if (tankTop == true)
-        {
-            tankTopPivot.gameObject.SetActive(true);
-            firemanPivot.gameObject.SetActive(false);
-            hatGuyPivot.gameObject.SetActive(false);
-            trenchLadyPivot.gameObject.SetActive(false);
-        }
-
-       if (trenchLady == true)
-        {
-            trenchLadyPivot.gameObject.SetActive(true);
-            hatGuyPivot.gameObject.SetActive(false);
-            firemanPivot.gameObject.SetActive(false);
-            tankTopPivot.gameObject.SetActive(false);
-        }
-		/* 
-        if (hatGuy == true)
-        {
-            hatGuyPivot.gameObject.SetActive(true);
-            firemanPivot.gameObject.SetActive(false);
-            tankTopPivot.gameObject.SetActive(false);
-            trenchLadyPivot.gameObject.SetActive(false);
-        }*/
-
     }
 
     // Called by the Interaction Object

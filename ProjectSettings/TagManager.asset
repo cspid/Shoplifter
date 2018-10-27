@@ -9,6 +9,7 @@ TagManager:
   - Sitting PP
   - TankTop
   - FireMan
+  - range
   layers:
   - Default
   - TransparentFX

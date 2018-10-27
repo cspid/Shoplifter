@@ -174,7 +174,157 @@ ModelImporter:
     13700008: Hair
     13700010: Shoes
     13700012: Tops
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bodymat
+    second: {fileID: 2100000, guid: 7957230fb46554c5fa673a4d3fda0eb1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bottommat
+    second: {fileID: 2100000, guid: 72c36e9fb39d4484184d365a765ef0b4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hairmat
+    second: {fileID: 2100000, guid: ff42c469097464e77bb5bf072db77329, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shoesmat
+    second: {fileID: 2100000, guid: 5cb2e852c27f24f29a5d2cbfd13bec38, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Topmat
+    second: {fileID: 2100000, guid: 7b8fb99631b3b4de48d9ce4527a293af, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: trench_lady_Body_Diffuse
+    second: {fileID: 2800000, guid: 0121a62b7c660452eaf32be9c848f17f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: trench_lady_Body_Gloss
+    second: {fileID: 2800000, guid: 337af81cb58054e78a9e9b4e12b4fc24, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: trench_lady_Body_Normal
+    second: {fileID: 2800000, guid: 9287cefa7967d48678833611eb446099, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: trench_lady_Body_Opacity
+    second: {fileID: 2800000, guid: 85bf3c02747f34a9c8c5e1d1ee30c063, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: trench_lady_Body_Specular
+    second: {fileID: 2800000, guid: 29d0af925a1434a50ba0d34676d2f28b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: trench_lady_Bottom_Diffuse
+    second: {fileID: 2800000, guid: 6b6861ff660a045be88416444ccd5eb7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: trench_lady_Bottom_Gloss
+    second: {fileID: 2800000, guid: 784c81492a99a45dc9ba9514dad5049a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: trench_lady_Bottom_Normal
+    second: {fileID: 2800000, guid: 04ebebdfe038c45c4939ff9369518944, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: trench_lady_Bottom_Opacity
+    second: {fileID: 2800000, guid: 2cd08fbe4d1264401b0f647bb1d2adf9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: trench_lady_Bottom_Specular
+    second: {fileID: 2800000, guid: 5347e91334fd543e2a2f480d9ac68a37, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: trench_lady_Hair_Diffuse
+    second: {fileID: 2800000, guid: 278c1b1cee8f146d5bfdf45ee9e52272, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: trench_lady_Hair_Gloss
+    second: {fileID: 2800000, guid: ae812fbf103c94eea9e16b6595ebc7e2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: trench_lady_Hair_Normal
+    second: {fileID: 2800000, guid: 88715329fb6754c2e9e02e29f3aca908, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: trench_lady_Hair_Opacity
+    second: {fileID: 2800000, guid: 2c59d1770b6d24cbdb003377ff3dc543, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: trench_lady_Hair_Specular
+    second: {fileID: 2800000, guid: e6d05a56d84cd48d1ac953689369885e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: trench_lady_Shoes_Diffuse
+    second: {fileID: 2800000, guid: 33f160e36af0b4c74a28de89b8f905da, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: trench_lady_Shoes_Gloss
+    second: {fileID: 2800000, guid: 2b45cc634ed9549c9a6ae8922c10411e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: trench_lady_Shoes_Normal
+    second: {fileID: 2800000, guid: 3dc7a075ce22e4265941a450cef2df77, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: trench_lady_Shoes_Opacity
+    second: {fileID: 2800000, guid: f918031ca716b45e7b2f765af6f8eac7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: trench_lady_Shoes_Specular
+    second: {fileID: 2800000, guid: bdc86b87bdc1d457c839ecd1358b4529, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: trench_lady_Top_Diffuse
+    second: {fileID: 2800000, guid: a97d40556fe2b492ca07f372f4cd6bc9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: trench_lady_Top_Gloss
+    second: {fileID: 2800000, guid: d378860bc16b54b89906dff5fed6cbfc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: trench_lady_Top_Normal
+    second: {fileID: 2800000, guid: 008b61c954794425fbff1a8ba45827b7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: trench_lady_Top_Opacity
+    second: {fileID: 2800000, guid: a3680bcc1c85d44d8977ee94690eaa1f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: trench_lady_Top_Specular
+    second: {fileID: 2800000, guid: 0bd7380e8c12b434081501bd024757a4, type: 3}
   materials:
     importMaterials: 1
     materialName: 0
