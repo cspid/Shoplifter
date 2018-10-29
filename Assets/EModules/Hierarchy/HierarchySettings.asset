@@ -169,11 +169,11 @@ MonoBehaviour:
   lastIconSelect: []
   lasHiglightColorSelect:
   - serializedVersion: 2
+    rgba: 4291470222
+  - serializedVersion: 2
     rgba: 4281906641
   - serializedVersion: 2
     rgba: 4281001183
-  - serializedVersion: 2
-    rgba: 4291470222
   - serializedVersion: 2
     rgba: 4288077190
   - serializedVersion: 2

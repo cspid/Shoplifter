@@ -36,6 +36,10 @@ public class ObjectTakeAndLeave : MonoBehaviour {
     private void Start()
     {
         holdCheck = GameObject.FindWithTag("Player").GetComponent<HoldCheck>();
+		placementPoint = GameObject.Find("Placement Point");
+		leftHand =  GameObject.Find("mixamorig:LeftHand").transform;
+		rightHand = GameObject.Find("mixamorig:RightHand").transform;
+
     }
 
 	private void OnTriggerEnter(Collider other)
