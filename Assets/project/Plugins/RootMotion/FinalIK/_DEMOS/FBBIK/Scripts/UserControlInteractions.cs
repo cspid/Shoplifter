@@ -20,6 +20,7 @@ namespace RootMotion.Demos {
         public Transform thisLeftHand;
         public Transform thisRightHand;
 
+		public bool aiCanGrab;
 
         //when we steeeeal
 		public void Stolen()
@@ -88,42 +89,7 @@ namespace RootMotion.Demos {
 
                 //set the hamds on ObjectTakeAnd Leave to this player's hands
                 interactionSystem.GetClosestInteractionObjectInRange().transform.parent.gameObject.GetComponent<ObjectTakeAndLeave>().leftHand = thisLeftHand;
-                interactionSystem.GetClosestInteractionObjectInRange().transform.parent.gameObject.GetComponent<ObjectTakeAndLeave>().rightHand = thisRightHand;
-                
-                ////set the hand target by character type
-                //if (gameObject.name == "Fireman") 
-                //{
-                //    print(interactionSystem.GetClosestInteractionObjectInRange());
-                //    interactionSystem.GetClosestInteractionObjectInRange().transform.parent.gameObject.GetComponent<ObjectTakeAndLeave>().fireman = true;
-                //    interactionSystem.GetClosestInteractionObjectInRange().transform.parent.gameObject.GetComponent<ObjectTakeAndLeave>().tankTop = false;
-                //    interactionSystem.GetClosestInteractionObjectInRange().transform.parent.gameObject.GetComponent<ObjectTakeAndLeave>().hatGuy = false;
-                //    interactionSystem.GetClosestInteractionObjectInRange().transform.parent.gameObject.GetComponent<ObjectTakeAndLeave>().trenchLady = false;
-                //}
-
-                //if (gameObject.name == "TankTop")
-                //{
-                //    interactionSystem.GetClosestInteractionObjectInRange().transform.parent.gameObject.GetComponent<ObjectTakeAndLeave>().tankTop = true;
-                //    interactionSystem.GetClosestInteractionObjectInRange().transform.parent.gameObject.GetComponent<ObjectTakeAndLeave>().fireman = false;
-                //    interactionSystem.GetClosestInteractionObjectInRange().transform.parent.gameObject.GetComponent<ObjectTakeAndLeave>().hatGuy = false;
-                //    interactionSystem.GetClosestInteractionObjectInRange().transform.parent.gameObject.GetComponent<ObjectTakeAndLeave>().trenchLady = false;
-                //}
-
-                //if (gameObject.name == "TrenchLady")
-                //{
-                //    interactionSystem.GetClosestInteractionObjectInRange().transform.parent.gameObject.GetComponent<ObjectTakeAndLeave>().trenchLady = true;
-                //    interactionSystem.GetClosestInteractionObjectInRange().transform.parent.gameObject.GetComponent<ObjectTakeAndLeave>().tankTop = false;
-                //    interactionSystem.GetClosestInteractionObjectInRange().transform.parent.gameObject.GetComponent<ObjectTakeAndLeave>().fireman = false;
-                //    interactionSystem.GetClosestInteractionObjectInRange().transform.parent.gameObject.GetComponent<ObjectTakeAndLeave>().hatGuy = false;
-                //}
-
-                //if (gameObject.name == "HatGuy")
-                //{
-                //    interactionSystem.GetClosestInteractionObjectInRange().transform.parent.gameObject.GetComponent<ObjectTakeAndLeave>().hatGuy = true;
-                //    interactionSystem.GetClosestInteractionObjectInRange().transform.parent.gameObject.GetComponent<ObjectTakeAndLeave>().tankTop = false;
-                //    interactionSystem.GetClosestInteractionObjectInRange().transform.parent.gameObject.GetComponent<ObjectTakeAndLeave>().fireman = false;
-                //    interactionSystem.GetClosestInteractionObjectInRange().transform.parent.gameObject.GetComponent<ObjectTakeAndLeave>().trenchLady = false;
-                //}
-                
+                interactionSystem.GetClosestInteractionObjectInRange().transform.parent.gameObject.GetComponent<ObjectTakeAndLeave>().rightHand = thisRightHand;                
             }
 
             if (holdCheck.holdingLeft == true && interactionSystem.GetClosestInteractionObjectInRange().name == "Interaction Object L Hand" && heldItemName != null){
@@ -140,12 +106,13 @@ namespace RootMotion.Demos {
             {
                 if ((holdCheck.holdingLeft == false && holdCheck.holdingRight == false) || (holdCheck.holdingLeft == true && interactionSystem.GetClosestInteractionObjectInRange().name == "Interaction Object L Hand") || (holdCheck.holdingRight == true && interactionSystem.GetClosestInteractionObjectInRange().name == "Interaction Object R Hand"))
                 {
-                    //...pick up an item in range when we press the button
-                    if (Input.GetKey(KeyCode.E) || Input.GetButton("MXButton0"))
+                    //...pick up an item in range when we press the button or the ai script says to
+					if (Input.GetKey(KeyCode.E) || Input.GetButton("MXButton0") || aiCanGrab == true)
                     {
                         interactionSystem.TriggerInteraction(closestTriggerIndex, false);
                         heldItemName = interactionSystem.GetClosestInteractionObjectInRange().transform.parent.name;
 						heldObject = interactionSystem.GetClosestInteractionObjectInRange().transform.parent.root.gameObject;
+						aiCanGrab = false;
                     }
                 }
             }

@@ -24,16 +24,21 @@ public class ObjectTakeAndLeave : MonoBehaviour {
         public Transform tankTopPivot;
         public Transform hatGuyPivot;
         public Transform trenchLadyPivot;
-
+	    public bool wasHeld;
 
 
         bool holdingRight;
         bool holdingLeft;
 
-        HoldCheck holdCheck;
+        
+	    HoldCheck holdCheck;
 
+	private void OnEnable()
+	{
+		if(GameObject.Find("placement holder").transform.GetChild(0).gameObject != null) placementPoint = GameObject.Find("placement holder").transform.GetChild(0).gameObject;
+	}
 
-    private void Start()
+	private void Start()
     {
         holdCheck = GameObject.FindWithTag("Player").GetComponent<HoldCheck>();
     }
